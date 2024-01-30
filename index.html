@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sudoku Solver</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <lin min="1" max="9"k rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h1 class="info"> Sudoku Solver </h1>
+  <h3 class="info"> Built by Leonardo Chung & Bernardo Czizyk</h3>
+
+  <div id="matriz" pattern="[0-9]{1}">
+    
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="1"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="2"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="3"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="4"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="5"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="6"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="7"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="8"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="9"></div>
+
+
+
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="10"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="11"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="12"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="13"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="14"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="15"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="16"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="17"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="18"></div>
+  
+
+
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="19"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="20"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="21"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="22"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="23"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="24"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="25"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="26"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="27"></div>
+
+
+
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="28"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="29"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="30"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="31"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="32"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="33"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="34"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="35"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="36"></div>
+
+
+
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="37"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="38"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="39"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="40"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="41"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="42"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="43"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="44"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="45"></div>
+
+
+
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="46"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="47"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="48"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="49"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="50"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="51"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="52"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="53"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="54"></div>
+
+
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="55"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="56"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="57"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="58"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="59"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="60"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="61"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="62"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="63"></div>
+
+
+
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="64"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="65"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="66"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="67"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="68"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="69"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="70"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="71"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="72"></div>
+
+
+
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="73"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="74"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="75"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="76"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="77"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="78"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="79"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="80"></div>
+      <div><input type="number" min="1" max="9" oninput="limitInputLength(this, 1)" id="81"></div>
+
+  </div>
+
+  <div class="buttons">
+    <button onclick="solve()" id="solve"> Solve </button>
+    <button onclick="reset()" id="reset"> Reset </button>
+  </div>
+
+  <div>
+    <p id="msg"></p>
+  </div>
+
+</body>
+
+</html>
